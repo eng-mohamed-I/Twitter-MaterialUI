@@ -1,5 +1,5 @@
 import React from 'react';
-import { AppBar, Toolbar, Typography, Tabs, Tab, Box, CssBaseline, ThemeProvider, createTheme } from '@mui/material';
+import { AppBar, Toolbar, Tabs, Tab, Box, CssBaseline, ThemeProvider, createTheme } from '@mui/material';
 
 const darkTheme = createTheme({
   palette: {
@@ -27,9 +27,8 @@ const Navbar = () => {
       <AppBar 
         position="static" 
         sx={{ 
-          backgroundColor: '#1e1e1e', 
-          border: '1px solid #ffffff', // White border
-          backdropFilter: 'blur(10px)', // Backdrop filter for frosted glass effect
+          backgroundColor: 'black', 
+          backdropFilter: 'blur(5px)', // Backdrop filter for frosted glass effect
           boxShadow: 'none', // Remove default shadow
         }}
       >

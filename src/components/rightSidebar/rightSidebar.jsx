@@ -19,27 +19,28 @@ const RightSidebar = () => {
   return (
     <ThemeProvider theme={darkTheme}>
       <CssBaseline />
-      <Box sx={{ width: '100%', p: 2 }}>
+      <Box sx={{ width: '100%', p: 2  }}>
         {/* Search Box */}
-        <Box sx={{ display: 'flex', alignItems: 'center', mb: 3 }}>
+        <Box sx={{  color: 'gray',  display: 'flex', alignItems: 'center', mb: 3 }}>
           <TextField
             variant="outlined"
-            placeholder="Search Twitter"
+            placeholder="Search"
             size="small"
             fullWidth
             InputProps={{
               startAdornment: (
                 <IconButton>
-                  <SearchIcon sx={{ color: '#ffffff' }} />
+                  <SearchIcon sx={{ color: 'gray' }} />
                 </IconButton>
               ),
             }}
             sx={{
               '& .MuiOutlinedInput-root': {
+                backgroundColor: '#151515',
                 color: '#ffffff',
                 borderRadius: '20px', // Increase the border-radius here
                 '& fieldset': {
-                  borderColor: '#ffffff',
+    
                 },
                 '&:hover fieldset': {
                   borderColor: '#ffffff',
@@ -55,7 +56,7 @@ const RightSidebar = () => {
         {/* Trending Hashtags */}
         <Card sx={{ mb: 2 }}>
           <CardContent>
-            <Typography variant="h6">Trends for you</Typography>
+            <Typography variant="h6">Trends</Typography>
             <List>
               {['#ReactJS', '#MaterialUI', '#JavaScript', '#WebDevelopment'].map((hashtag) => (
                 <ListItem key={hashtag}>
@@ -69,11 +70,11 @@ const RightSidebar = () => {
         {/* Who to Follow */}
         <Card>
           <CardContent>
-            <Typography variant="h6">Who to follow</Typography>
+            <Typography variant="h6">followers</Typography>
             <List>
               {[
-                { name: 'John Doe', username: '@johndoe', avatar: 'https://via.placeholder.com/40' },
-                { name: 'Jane Smith', username: '@janesmith', avatar: 'https://via.placeholder.com/40' },
+                { name: 'Ahmed', username: '@ahmed1', avatar: 'https://via.placeholder.com/40' },
+                { name: 'Mohamed', username: '@mohamed1', avatar: 'https://via.placeholder.com/40' },
               ].map((profile) => (
                 <ListItem key={profile.username}>
                   <ListItemAvatar>

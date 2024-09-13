@@ -1,6 +1,5 @@
 import React from 'react';
-import { Box, List, ListItem, ListItemIcon, ListItemText, IconButton } from '@mui/material';
-import TwitterIcon from '@mui/icons-material/Twitter';
+import { Box, List, ListItem, ListItemIcon, ListItemText, IconButton, Button } from '@mui/material';
 import HomeIcon from '@mui/icons-material/Home';
 import SearchIcon from '@mui/icons-material/Search';
 import NotificationsIcon from '@mui/icons-material/Notifications';
@@ -9,6 +8,7 @@ import BookmarkBorderIcon from '@mui/icons-material/BookmarkBorder';
 import ListAltIcon from '@mui/icons-material/ListAlt';
 import PersonOutlineIcon from '@mui/icons-material/PersonOutline';
 import MoreHorizIcon from '@mui/icons-material/MoreHoriz';
+import XIcon from '@mui/icons-material/X';
 
 const Sidebar = () => {
   return (
@@ -16,14 +16,17 @@ const Sidebar = () => {
       sx={{
         height: '100vh',
         width: '100%',
-        backgroundColor: '#1e1e1e', // Darker background for right sidebar
+        backgroundColor: 'black', // Darker background for right sidebar
         padding: '20px',
         color: '#ffffff', // White text for dark mode
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'space-between', // To push "Post" button to the bottom
       }}
     >
-      {/* Twitter Logo */}
+      {/* Logo X icon */}
       <IconButton color="primary">
-        <TwitterIcon sx={{ color: '#1DA1F2', fontSize: 40 }} /> {/* Twitter blue */}
+        <XIcon sx={{ color: '#1DA1F2', fontSize: 40 }} /> {/* X icon */}
       </IconButton>
 
       {/* Menu List */}
@@ -84,6 +87,24 @@ const Sidebar = () => {
           <ListItemText primary="More" sx={{ color: '#ffffff' }} />
         </ListItem>
       </List>
+
+      {/* Add Post Button */}
+      <Box sx={{ paddingBottom: '20px', textAlign: 'center' }}>
+        <Button
+          variant="contained"
+          sx={{
+            backgroundColor: '#1DA1F2', // Primary Twitter color
+            color: '#ffffff',
+            width: '100%',
+            borderRadius: '30px', // Rounded corners for the button
+            padding: '10px 0',
+            fontSize: '16px',
+            textTransform: 'none', // Remove uppercase transformation
+          }}
+        >
+          Post
+        </Button>
+      </Box>
     </Box>
   );
 };
